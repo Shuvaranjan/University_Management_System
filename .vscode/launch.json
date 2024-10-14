@@ -1,0 +1,267 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "LoadScreen",
+            "request": "launch",
+            "mainClass": "LoadScreen",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "Load",
+            "request": "launch",
+            "mainClass": "Load",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "Main",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "HelloWorld",
+            "request": "launch",
+            "mainClass": "Students.HelloWorld",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "StudentsFees_Form",
+            "request": "launch",
+            "mainClass": "Students.StudentsFees_Form",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "About",
+            "request": "launch",
+            "mainClass": "About",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "FeesStructure",
+            "request": "launch",
+            "mainClass": "Students.FeesStructure",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "Marks",
+            "request": "launch",
+            "mainClass": "Students.Marks",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "Examination_Details",
+            "request": "launch",
+            "mainClass": "Students.Examination_Details",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "Enter_Marks",
+            "request": "launch",
+            "mainClass": "Faculty_Members.Enter_Marks",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "UpdateTeacher_Details",
+            "request": "launch",
+            "mainClass": "Faculty_Members.UpdateTeacher_Details",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "UpdateStudent_Details",
+            "request": "launch",
+            "mainClass": "Students.UpdateStudent_Details",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "TeacherLeaveDetails",
+            "request": "launch",
+            "mainClass": "Faculty_Members.TeacherLeaveDetails",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "StudentLeaveDetails",
+            "request": "launch",
+            "mainClass": "Students.StudentLeaveDetails",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "StudentLeave_Details",
+            "request": "launch",
+            "mainClass": "Students.StudentLeave_Details",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "HelpDesk",
+            "request": "launch",
+            "mainClass": "HelpDesk",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "TeacherLeave",
+            "request": "launch",
+            "mainClass": "Faculty_Members.TeacherLeave",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "StudentLeave",
+            "request": "launch",
+            "mainClass": "Students.StudentLeave",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "TeacherDetails",
+            "request": "launch",
+            "mainClass": "Faculty_Members.TeacherDetails",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "StudentDetails",
+            "request": "launch",
+            "mainClass": "Students.StudentDetails",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "AddTeacher",
+            "request": "launch",
+            "mainClass": "Faculty_Members.AddTeacher",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "AddStudent",
+            "request": "launch",
+            "mainClass": "Students.AddStudent",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "Color_Dialog",
+            "request": "launch",
+            "mainClass": "Color_Dialog",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "Application",
+            "request": "launch",
+            "mainClass": "Application",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "MainGUI",
+            "request": "launch",
+            "mainClass": "MainGUI",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "E",
+            "request": "launch",
+            "mainClass": "E",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "Sample",
+            "request": "launch",
+            "mainClass": "Sample",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "AddStudent",
+            "request": "launch",
+            "mainClass": "AddStudent",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "D",
+            "request": "launch",
+            "mainClass": "D",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Dasboard",
+            "request": "launch",
+            "mainClass": "Dasboard",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "EmailSendingApplication",
+            "request": "launch",
+            "mainClass": "EmailSendingApplication",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "Faculty_Login",
+            "request": "launch",
+            "mainClass": "Faculty_Login",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "Login",
+            "request": "launch",
+            "mainClass": "Login",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "Project",
+            "request": "launch",
+            "mainClass": "Project",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "Project2",
+            "request": "launch",
+            "mainClass": "Project2",
+            "projectName": "University_Management_System_48ff9309"
+        },
+        {
+            "type": "java",
+            "name": "SplashScreen",
+            "request": "launch",
+            "mainClass": "SplashScreen",
+            "projectName": "University_Management_System_48ff9309",
+            "vmArgs": "--module-path \"D:/Javafx_sdk/javafx-sdk-22.0.1/lib\" --add-modules javafx.controls,javafx.fxml"
+        }
+    ]
+}
