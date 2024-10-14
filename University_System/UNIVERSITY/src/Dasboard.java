@@ -38,7 +38,7 @@ public class Dasboard extends JFrame implements ActionListener {
         setResizable(false);
         setLayout(null);
         setUndecorated(true);
-        getRootPane().setBorder(BorderFactory.createLineBorder(new Color(255,255,255),1));
+        getRootPane().setBorder(BorderFactory.createLineBorder(new Color(255, 255, 255), 1));
 
         // getContentPane().setBackground(new Color(25, 193, 193));
 
@@ -66,15 +66,8 @@ public class Dasboard extends JFrame implements ActionListener {
 
         makautlbl2 = new JLabel("MAKAUT");
         makautlbl2.setForeground(new Color(255, 255, 255, 180));
+        makautlbl2.setFont(new Font("Dialog", Font.BOLD, 150));
         makautpanel2.add(makautlbl2);
-
-        try {
-            File fontStyle = new File("University_System/UNIVERSITY/src/Font/Nosifer-Regular.ttf");
-            Font font = Font.createFont(Font.TRUETYPE_FONT, fontStyle).deriveFont(120f);
-            makautlbl2.setFont(font);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
 
         // head Panel
         panel = new JPanel();
@@ -188,7 +181,7 @@ public class Dasboard extends JFrame implements ActionListener {
             public void mouseClicked(MouseEvent e) {
                 if (getExtendedState() == JFrame.MAXIMIZED_BOTH) {
                     JPanel panel = new JPanel();
-                    panel.setBounds(0,0,1200,30);
+                    panel.setBounds(0, 0, 1200, 30);
                     panel.setBackground(null);
                     panel.addMouseListener(new MouseAdapter() {
                         public void mousePressed(MouseEvent e) {
@@ -197,6 +190,7 @@ public class Dasboard extends JFrame implements ActionListener {
                             mouseX = e.getX();
                             mouseY = e.getY();
                         }
+
                         public void mouseReleased(MouseEvent e) {
                             setOpacity(1f);
 
@@ -208,7 +202,7 @@ public class Dasboard extends JFrame implements ActionListener {
                             int x = e.getXOnScreen() - mouseX;
                             int y = e.getYOnScreen() - mouseY;
 
-                            setLocation(x,y);
+                            setLocation(x, y);
                         };
                     });
                     add(panel);
@@ -223,15 +217,9 @@ public class Dasboard extends JFrame implements ActionListener {
 
                     makautlbl2 = new JLabel("MAKAUT");
                     makautlbl2.setForeground(new Color(255, 255, 255, 180));
-                    makautpanel2.add(makautlbl2);
+                    makautlbl2.setFont(new Font("Dialog", Font.BOLD, 150));
 
-                    try {
-                        File fontStyle = new File("University_System/UNIVERSITY/src/Font/Nosifer-Regular.ttf");
-                        Font font = Font.createFont(Font.TRUETYPE_FONT, fontStyle).deriveFont(80f);
-                        makautlbl2.setFont(font);
-                    } catch (Exception ex) {
-                        ex.printStackTrace();
-                    }
+                    makautpanel2.add(makautlbl2);
 
                     setimage1.addMouseListener(new MouseAdapter() {
 
@@ -314,15 +302,10 @@ public class Dasboard extends JFrame implements ActionListener {
 
                     makautlbl2 = new JLabel("MAKAUT");
                     makautlbl2.setForeground(new Color(255, 255, 255, 180));
+                    makautlbl2.setFont(new Font("Dialog", Font.BOLD, 150));
+
                     makautpanel2.add(makautlbl2);
-            
-                    try {
-                        File fontStyle = new File("University_System/UNIVERSITY/src/Font/Nosifer-Regular.ttf");
-                        Font font = Font.createFont(Font.TRUETYPE_FONT, fontStyle).deriveFont(120f);
-                        makautlbl2.setFont(font);
-                    } catch (Exception exp) {
-                        exp.printStackTrace();
-                    }
+
                     setimage1.addMouseListener(new MouseAdapter() {
 
                         @Override
@@ -444,7 +427,7 @@ public class Dasboard extends JFrame implements ActionListener {
 
             @Override
             public void mouseClicked(MouseEvent e) {
-             new Login().setVisible(true);
+                new Login().setVisible(true);
             }
 
         });
