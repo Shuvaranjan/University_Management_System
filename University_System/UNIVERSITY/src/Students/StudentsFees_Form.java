@@ -208,6 +208,7 @@ public class StudentsFees_Form extends JDialog implements ActionListener {
     update.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
     update.addActionListener(this);
     update.setForeground(Color.WHITE);
+    update.setFocusable(false);
     add(update);
 
     // Button-Pay
@@ -219,6 +220,7 @@ public class StudentsFees_Form extends JDialog implements ActionListener {
     pay.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
     pay.addActionListener(this);
     pay.setForeground(Color.WHITE);
+    pay.setFocusable(false);
     add(pay);
 
     // Button-Back
@@ -230,6 +232,7 @@ public class StudentsFees_Form extends JDialog implements ActionListener {
     back.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
     back.addActionListener(this);
     back.setForeground(Color.WHITE);
+    pay.setFocusable(false);
     add(back);
   }
 
@@ -261,23 +264,30 @@ public class StudentsFees_Form extends JDialog implements ActionListener {
         exp.printStackTrace();
       }
     } else if (e.getSource() == pay) {
+     
       String rollNo = crollno.getSelectedItem();
       String semester = (String) cbsemester.getSelectedItem();
       String course = (String) cbCourse.getSelectedItem();
       String branch = (String) cbBranch.getSelectedItem();
       String total = labelTotal.getText();
-
-      try {
-        Conn conn = new Conn();
-        String query = "INSERT INTO collegefee VALUES ('" + rollNo + "', '" + course + "', '" + branch + "', '"
-            + semester + "', '" + total + "')";
-        conn.s.executeUpdate(query);
+      if (course.equals("  ---- Select Option ----") && branch.equals("  ---- Select Option ----")) {
         JOptionPane.showMessageDialog(null,
-            "<html><body style=\'color:green;\'>Semester Fee Submitted Successfully</body></html>");
-        this.setVisible(false);
-      } catch (Exception exp) {
-        exp.printStackTrace();
+            "<html><body style=\'color:red;\'>Please Enter your course and branch</body></html>");
+        // this.setVisible(false);
+      }else{
+        try {
+          Conn conn = new Conn();
+          String query = "INSERT INTO collegefee VALUES ('" + rollNo + "', '" + course + "', '" + branch + "', '"
+              + semester + "', '" + total + "')";
+          conn.s.executeUpdate(query);
+          JOptionPane.showMessageDialog(null,
+              "<html><body style=\'color:green;\'>Semester Fee Submitted Successfully</body></html>");
+          this.setVisible(false);
+        } catch (Exception exp) {
+          exp.printStackTrace();
+        }
       }
+      
     } else {
       this.dispose();
     }

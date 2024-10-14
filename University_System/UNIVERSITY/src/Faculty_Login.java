@@ -6,7 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.ResultSet;
@@ -14,16 +13,15 @@ import java.sql.ResultSet;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
-import javax.swing.JFrame;
+import javax.swing.JDialog;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 import javax.swing.SwingUtilities;
-
 import Database.Conn;
 
-public class Faculty_Login extends JFrame implements ActionListener {
+public class Faculty_Login extends JDialog implements ActionListener {
     private JLabel lblUsername, lblPassword, showWarning, showWarning2;
     private JTextField tfUsername;
     private JPasswordField tfPassword;
@@ -32,9 +30,10 @@ public class Faculty_Login extends JFrame implements ActionListener {
 
     public Faculty_Login() {
         setSize(600, 300);
+        setModal(true);
         setLocation(500, 250);
         getContentPane().setBackground(new Color(0, 94, 191));
-        setVisible(true);
+        // setVisible(true);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLayout(null);
         setTitle("Faculty Login");
@@ -131,7 +130,6 @@ public class Faculty_Login extends JFrame implements ActionListener {
             @Override
             public void actionPerformed(ActionEvent e) {
                 Faculty_Login.this.dispose();
-                new Dasboard().setVisible(true);
 
             }
 

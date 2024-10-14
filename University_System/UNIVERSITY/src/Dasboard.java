@@ -1,16 +1,13 @@
-import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.Image;
-import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
-
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -41,6 +38,7 @@ public class Dasboard extends JFrame implements ActionListener {
         setResizable(false);
         setLayout(null);
         setUndecorated(true);
+        getRootPane().setBorder(BorderFactory.createLineBorder(new Color(255,255,255),1));
 
         // getContentPane().setBackground(new Color(25, 193, 193));
 
@@ -194,9 +192,15 @@ public class Dasboard extends JFrame implements ActionListener {
                     panel.setBackground(null);
                     panel.addMouseListener(new MouseAdapter() {
                         public void mousePressed(MouseEvent e) {
+                            setOpacity(0.7f);
+
                             mouseX = e.getX();
                             mouseY = e.getY();
-                        };
+                        }
+                        public void mouseReleased(MouseEvent e) {
+                            setOpacity(1f);
+
+                        }
                     });
 
                     panel.addMouseMotionListener(new MouseAdapter() {
@@ -440,9 +444,7 @@ public class Dasboard extends JFrame implements ActionListener {
 
             @Override
             public void mouseClicked(MouseEvent e) {
-                Dasboard.this.dispose();
-                Login login = new Login();
-                login.setVisible(true);
+             new Login().setVisible(true);
             }
 
         });
@@ -458,7 +460,6 @@ public class Dasboard extends JFrame implements ActionListener {
 
             @Override
             public void mouseClicked(MouseEvent e) {
-                Dasboard.this.dispose();
                 new Faculty_Login().setVisible(true);
 
             }
@@ -531,92 +532,10 @@ public class Dasboard extends JFrame implements ActionListener {
         setimage2.setBounds(-2, 756, 50, 50);
         setimage2.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
         setimage2.addMouseListener(new MouseAdapter() {
-
             @Override
             public void mouseClicked(MouseEvent e) {
-
-                dialog = new JDialog();
-                dialog.setSize(500, 200);
-                dialog.setLocation(600, 250);
-
-                dialog.setLayout(new FlowLayout(1, 25, 50));
-                dialog.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-                dialog.getContentPane().setBackground(new Color(44, 44, 44));
-                dialog.setVisible(true);
-
-                color1 = new JButton("Color1");
-                // color1.setBounds(10,50,100,50);
-                color1.setForeground(Color.WHITE);
-                color1.setBackground(Color.BLACK);
-                color1.setFont(new Font("Calibri", Font.BOLD, 20));
-                color1.addActionListener(new ActionListener() {
-
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        panel.setBackground(Color.DARK_GRAY);
-                        panel3.setBackground(new Color(255, 0, 36));
-                        dialog.setVisible(false);
-
-                    }
-
-                });
-
-                dialog.add(color1);
-
-                color2 = new JButton("Color2");
-                // color2.setBounds(10,50,100,50);
-                color2.setForeground(Color.WHITE);
-                color2.setBackground(Color.BLACK);
-                color2.setBounds(0, 50, 100, 50);
-                color2.setFont(new Font("Calibri", Font.BOLD, 20));
-                color2.addActionListener(new ActionListener() {
-
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        panel.setBackground(new Color(12, 0, 255));
-                        panel3.setBackground(new Color(9, 0, 186));
-                        dialog.setVisible(false);
-
-                    }
-
-                });
-                dialog.add(color2);
-
-                color3 = new JButton("Color3");
-                color3.setForeground(Color.WHITE);
-                color3.setBackground(Color.BLACK);
-                color3.setFont(new Font("Calibri", Font.BOLD, 20));
-                color3.addActionListener(new ActionListener() {
-
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        panel.setBackground(new Color(20, 20, 20));
-                        panel3.setBackground(new Color(12, 12, 12));
-                        dialog.setVisible(false);
-
-                    }
-
-                });
-                dialog.add(color3);
-
-                color4 = new JButton("Color4");
-                color4.setForeground(Color.WHITE);
-                color4.setBackground(Color.BLACK);
-                color4.setFont(new Font("Calibri", Font.BOLD, 20));
-                color4.addActionListener(new ActionListener() {
-
-                    @Override
-                    public void actionPerformed(ActionEvent e) {
-                        panel.setBackground(new Color(96, 166, 0));
-                        panel3.setBackground(new Color(79, 137, 0));
-                        dialog.setVisible(false);
-                    }
-
-                });
-                dialog.add(color4);
-
+                new ColorChooser(panel, panel3).setVisible(true);
             }
-
         });
         panel3.add(setimage2);
 

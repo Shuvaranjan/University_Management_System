@@ -14,6 +14,7 @@ import java.sql.ResultSet;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
@@ -23,7 +24,7 @@ import javax.swing.SwingUtilities;
 
 import Database.Conn;
 
-public class Login extends JFrame implements ActionListener{
+public class Login extends JDialog implements ActionListener{
     
     private JButton loginButton, cancelButton;
     private JTextField tfUsername;
@@ -32,7 +33,7 @@ public class Login extends JFrame implements ActionListener{
     
     public Login(){
         setSize(600,300);
-        
+        setModal(true);
         setLocation(500,200);
         getContentPane().setBackground(new Color(0, 94, 191));
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -136,7 +137,6 @@ public class Login extends JFrame implements ActionListener{
             @Override
             public void actionPerformed(ActionEvent e) {
               Login.this.dispose();
-             new Dasboard().setVisible(true);
             
                 
             }

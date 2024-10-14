@@ -40,7 +40,7 @@ public class AddStudent extends JDialog implements ActionListener{
     
 
     Random random = new Random();
-    long first3 = Math.abs((random.nextLong() % 900L) + 100L);
+    long first3 = Math.abs((random.nextLong() % 900L) + 100L)+1;
 
     public AddStudent() {
         setTitle("Student Details");
@@ -80,7 +80,7 @@ public class AddStudent extends JDialog implements ActionListener{
         add(b);
 
         // name
-        name_label = new JLabel("Name:");
+        name_label = new JLabel("*Name:");
         name_label.setBounds(50, 100, 100, 30);
         name_label.setFont(new Font("serif", Font.PLAIN, 25));
         name_label.setForeground(Color.WHITE);
@@ -109,7 +109,7 @@ public class AddStudent extends JDialog implements ActionListener{
 
 
         // father's name
-        father_namelabel = new JLabel("Father's Name:");
+        father_namelabel = new JLabel("*Father's Name:");
         father_namelabel.setBounds(470, 100, 200, 30);
         father_namelabel.setFont(new Font("serif", Font.PLAIN, 25));
         father_namelabel.setForeground(Color.WHITE);
@@ -143,7 +143,7 @@ public class AddStudent extends JDialog implements ActionListener{
  
 
         // dob
-        dob_label = new JLabel("Date of Birth:");
+        dob_label = new JLabel("*Date of Birth:");
         dob_label.setBounds(470, 170, 200, 30);
         dob_label.setFont(new Font("serif", Font.PLAIN, 25));
         dob_label.setForeground(Color.WHITE);
@@ -179,7 +179,7 @@ public class AddStudent extends JDialog implements ActionListener{
 
 
         //ph
-        ph_label = new JLabel("Phone Number: ");
+        ph_label = new JLabel("*Phone Number: ");
         ph_label.setBounds(470, 240, 200, 30);
         ph_label.setFont(new Font("serif", Font.PLAIN, 25));
         ph_label.setForeground(Color.WHITE);
@@ -202,7 +202,7 @@ public class AddStudent extends JDialog implements ActionListener{
 
 
         // email
-        email_label = new JLabel("Email:");
+        email_label = new JLabel("*Email:");
         email_label.setBounds(50, 310, 200, 30);
         email_label.setFont(new Font("serif", Font.PLAIN, 25));
         email_label.setForeground(Color.WHITE);
@@ -217,7 +217,7 @@ public class AddStudent extends JDialog implements ActionListener{
 
 
         //aadhar
-        aadhar_nolabel = new JLabel("Aadhar: ");
+        aadhar_nolabel = new JLabel("*Aadhar: ");
         aadhar_nolabel.setBounds(470, 310, 200, 30);
         aadhar_nolabel.setFont(new Font("serif", Font.PLAIN, 25));
         aadhar_nolabel.setForeground(Color.WHITE);
@@ -252,7 +252,7 @@ public class AddStudent extends JDialog implements ActionListener{
 
        
         // board_percentage
-        board_percentagelabel = new JLabel("Class X(%):");
+        board_percentagelabel = new JLabel("*Class X(%):");
         board_percentagelabel.setBounds(50, 380, 200, 30);
         board_percentagelabel.setFont(new Font("serif", Font.PLAIN, 25));
         board_percentagelabel.setForeground(Color.WHITE);
@@ -269,7 +269,7 @@ public class AddStudent extends JDialog implements ActionListener{
 
 
         //hs
-        hs_percentagelabel = new JLabel("Class XII (%):");
+        hs_percentagelabel = new JLabel("*Class XII (%):");
         hs_percentagelabel.setBounds(470, 380, 200, 30);
         hs_percentagelabel.setFont(new Font("serif", Font.PLAIN, 25));
         hs_percentagelabel.setForeground(Color.WHITE);
@@ -293,7 +293,7 @@ public class AddStudent extends JDialog implements ActionListener{
 
         
         // course
-        course_label = new JLabel("Course:");
+        course_label = new JLabel("*Course:");
         course_label.setBounds(50, 450, 200, 30);
         course_label.setFont(new Font("serif", Font.PLAIN, 25));
         course_label.setForeground(Color.WHITE);
@@ -310,7 +310,7 @@ public class AddStudent extends JDialog implements ActionListener{
        
         
         //branch
-        branch_label = new JLabel("Branch:");
+        branch_label = new JLabel("*Branch:");
         branch_label.setBounds(470, 450, 200, 30);
         branch_label.setFont(new Font("serif", Font.PLAIN, 25));
         branch_label.setForeground(Color.WHITE);
